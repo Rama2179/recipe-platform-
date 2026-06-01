@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comments</title>
+  <link rel="stylesheet" href="/css/recipes.css">
+  <link rel="stylesheet" href="/css/comments.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <button class="add-recipe-btn" onclick="window.location.href='/home.html'">🏠 Home</button>
+  <button class="add-recipe-btn" onclick="window.location.href='/recipes.html'">🍲 Recipes</button>
+</div>
+
+<h1>💬 Comments &amp; Ratings</h1>
+
+<div id="recipe-info"></div>
+
+<div class="comment-form-box">
+  <h2>Leave a Review</h2>
+  <p id="username-display" style="font-weight:bold;margin-bottom:10px;"></p>
+  <div class="stars" id="star-selector">
+    <span class="star" data-val="1">★</span>
+    <span class="star" data-val="2">★</span>
+    <span class="star" data-val="3">★</span>
+    <span class="star" data-val="4">★</span>
+    <span class="star" data-val="5">★</span>
+  </div>
+  <input type="hidden" id="rating-val" value="0" />
+  <br>
+  <textarea id="comment-body" placeholder="Write your comment here..." rows="4"></textarea><br><br>
+  <button onclick="submitComment()">Submit</button>
+  <p id="form-msg" style="color:red;"></p>
+</div>
+
+<div id="comments-list"></div>
+
+<script src="/js/comments.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Recipe</title>
+</head>
+<body>
+<link rel="stylesheet" href="/css/recipeform.css">
+<div class="form-container">
+<h1>Create Recipe</h1>
+
+<form action="/api/recipes/create" method="POST">
+  <label for="title" class="title-label">Title</label><br>
+  <input name="title" placeholder="Title" class="title-box"><br><br>
+
+  <div class="time-row">
+    <div class="field">
+      <label>⏱Prep Time</label>
+      <input type="number" name="prepTime" placeholder="e.g. 15 min" class="small-input">
+    </div>
+
+    <div class="field">
+      <label>🔥Cook Time</label>
+      <input type="number" name="cookTime" placeholder="e.g. 20 min" class="small-input" >
+    </div>
+
+    <div class="field">
+      <label>🍽 Servings</label>
+      <input type="number" name="servings" placeholder="e.g. 4" class="small-input"> 
+    </div>
+  </div>
+  <label for="ingredients" class="ingredients-label">🍅 Ingredients</label><br>
+  <textarea name="ingredients" placeholder="One ingredient per line" class="ingredients-box"></textarea> <br><br>
+  <label for="instructions" class="instructions-label">👨‍🍳 Instructions</label><br>
+  <textarea name="instructions" placeholder="Seperate instructions with a double newline" class="instructions-box"></textarea><br><br>
+  <label for="image" class="image-label">🖼️ Icon URL</label><br>
+  <input id="imageInput" name="image" placeholder="Image URL">
+  <button type="button" onclick="setDefaultImage()" class="image-button">Use Default Image</button>
+  <br><br>
+
+  <button type="submit">Create Recipe</button>
+</form>
+<a href="/recipes.html">Back to Recipes</a>
+</div>
+<script src="/js/form.js"></script>
+</body>
+</html>
