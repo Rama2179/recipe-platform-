@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title> Home </title>
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <button class="logout-btn" onclick="logout()"> Log Out </button>
+</div>
+<div class="home-layout">
+  <div class="main-content">
+    <h1> Explore Recipe World 🔎 </h1>
+    <div class="Welcome">
+        <p>Welcome, <strong id="user-name"></strong>!</p>
+
+        <!--link to other module-->
+        <button class="nav-btn" onclick="window.location.href='/recipes.html'">Browse Recipes</button>
+
+        <!--Uncomment - to - enable. This is a link to the suggestions module. 
+         <button class="nav-btn" onclick="window.location.href='/suggestions.html'"> Suggestions</button>-->
+    </div>
+
+    </div>
+      <div class="sidebar">
+    <h2>❤️ Your Favorites</h2>
+    <div id="favorites-list"></div>
+    </div></div>
+    <script src="/js/users.js"></script>
+    <script> 
+        fetch('/api/users/profile')
+        .then(res => {
+            if (!res.ok) window.location.href = '/login.html';
+            return res.json();
+        })
+        .then(data => {
+            document.getElementById('user-name').textContent = data.name;
+        });
+    </script>
+    </body>
+    </html>
+
+    

@@ -1,0 +1,111 @@
+.comment-form-box {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comment-form-box h2 {
+    margin-top: 0;
+}
+
+.comment-form-box input[type="text"],
+.comment-form-box textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.comment-form-box button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    width: auto;
+}
+
+.stars {
+    display: inline-flex;
+    gap: 5px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star.active {
+    color: #f5a623;
+}
+
+.star:hover {
+    color: #f5a623;
+}
+
+#comments-list {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.avg-rating {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.comment-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.comment-user {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.comment-stars {
+    color: #f5a623;
+    font-size: 18px;
+}
+
+.comment-date {
+    color: #aaa;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.comment-body {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: auto;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
